@@ -1,4 +1,5 @@
 **Speech Command Recognition Using Machine Learning**
+
 This project implements a speech command recognition system designed to classify spoken instances of specific absolute keywords: "all," "must," "never," "none," and "only." The system leverages machine learning, particularly a Convolutional Neural Network (CNN) model trained on spectrogram data, to achieve robust keyword detection.
 
 **Key Features:**
