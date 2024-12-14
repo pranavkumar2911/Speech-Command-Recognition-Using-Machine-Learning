@@ -1,17 +1,36 @@
 **Speech Command Recognition Using Machine Learning**
 
-This project implements a speech command recognition system designed to classify spoken instances of specific absolute keywords: "all," "must," "never," "none," and "only." The system leverages machine learning, particularly a Convolutional Neural Network (CNN) model trained on spectrogram data, to achieve robust keyword detection.
+**Overview**
 
-**Key Features:**
+This project implements a machine learning-based speech recognition system capable of identifying absolute language keywords: "all," "must," "never," "none," and "only." It is optimized for real-time inference on embedded devices like the Arduino Nano 33 BLE Sense.
 
-**Custom Dataset:** Includes 5000 audio clips (~1 second each) with diverse accents and background noise.
+The system has potential applications in mental health monitoring and linguistic analysis, where detecting absolute statements can offer insights into emotional states or stress levels.
+
+**Features**
+
+**Custom Dataset:** 5000 audio clips (~1 second each) with diverse speaker accents and background noise conditions.
 
 **Preprocessing Pipeline:** Converts raw audio to spectrograms using Short-Time Fourier Transform (STFT), with resampling, padding, and normalization.
 
-**Model Design:** A lightweight CNN optimized for embedded systems.
+**Efficient Model Design:** Lightweight CNN architecture suitable for embedded deployment.
 
-**Deployment Ready:** Post-training quantization enables real-time inference on devices like the Arduino Nano 33 BLE Sense.
+**Deployment Optimizations:** Includes post-training quantization to reduce model size and improve efficiency on resource-constrained devices.
 
-**Performance:** Achieved ~94% validation accuracy with a focus on noise robustness and real-world generalization.
+**Dataset**
+**Keywords:** "all," "must," "never," "none," "only."
 
-This system is tailored for applications in mental health monitoring and other domains requiring accurate detection of absolute language in speech.
+**Total Samples:** ~5000 (50 new samples per keyword + ~950 pre-existing samples per keyword).
+
+**Format:** WAV files at 16 kHz, 1-second duration.
+
+**Model Architecture**
+
+The model uses a Convolutional Neural Network (CNN) with the following key layers:
+
+Resizing and normalization for input processing.
+
+Depthwise separable convolution for efficient feature extraction.
+
+MaxPooling and Dropout for regularization and dimensionality reduction.
+
+Fully connected layers for classification.
