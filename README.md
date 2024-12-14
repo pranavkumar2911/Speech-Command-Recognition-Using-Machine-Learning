@@ -1,4 +1,4 @@
-# Speech Command Recognition for Absolute Keywords
+# Speech Command Recognition using Machine Learning
 
 ## Overview
 This project implements a machine learning-based speech recognition system capable of identifying absolute language keywords: **"all," "must," "never," "none,"** and **"only."** It is optimized for real-time inference on embedded devices like the Arduino Nano 33 BLE Sense.
